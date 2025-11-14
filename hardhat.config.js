@@ -5,13 +5,17 @@ const { ALCHEMY_API_KEY, PRIVATE_KEY } = process.env || {};
 
 module.exports = {
   solidity: {
-    compilers: [
-      { version: "0.8.19" } // use any 0.8.x you prefer
-    ]
+    version: "0.8.20",
+    settings: {
+      optimizer: {
+        enabled: true,
+        runs: 200,
+      },
+    },
   },
   networks: {
-    hardhat: {
-      chainId: 1337
+    localhost: {
+      url: "http://127.0.0.1:8545",
     },
     // example config for Sepolia or Mumbai (uncomment & set env variables to use)
     // sepolia: {
