@@ -9,6 +9,10 @@ async function main() {
 
     console.log("Connected to contract at:", CONTRACT_ADDRESS);
 
+    const contractOwner = await myNFT.owner();
+    console.log("Contract owner:", contractOwner);
+    console.log("Minting NFT to:", addr1.address);
+
     const mintTransaction = await myNFT.connect(owner).mint(
         addr1.address,
         ""
