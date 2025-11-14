@@ -21,5 +21,11 @@ async function main() {
     await mintTransaction.wait();
     console.log("Mint Transaction complete!");
 
-
+    const uri = await myNFT.tokenURI(1);
+    console.log("TokenURI for tokenId 1:", uri);
 }
+
+main().catch((error) => {
+    console.error("Error:", error);
+    process.exitCode = 1;
+});
