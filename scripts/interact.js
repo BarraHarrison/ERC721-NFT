@@ -8,4 +8,14 @@ async function main() {
     const myNFT = MyNFT.attach(CONTRACT_ADDRESS);
 
     console.log("Connected to contract at:", CONTRACT_ADDRESS);
+
+    const mintTransaction = await myNFT.connect(owner).mint(
+        addr1.address,
+        ""
+    );
+
+    await mintTransaction.wait();
+    console.log("Mint Transaction complete!");
+
+
 }
