@@ -15,7 +15,7 @@ async function main() {
 
     const mintTransaction = await myNFT.connect(owner).mint(
         addr1.address,
-        ""
+        "http://localhost:3000/metadata/my-nft.json"
     );
 
     await mintTransaction.wait();
