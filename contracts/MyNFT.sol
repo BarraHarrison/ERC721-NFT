@@ -17,10 +17,10 @@ contract MyNFT is ERC721, Ownable {
         string memory symbol_,
         string memory baseURI_
     ) 
-        ERC721(name_, symbol_) 
+        ERC721("MyNFT", "MNFT") 
         Ownable(msg.sender)
     {
-        _baseTokenURI = baseURI_;
+        _baseTokenURI = "http://localhost:3000/metadata/";
         _nextTokenId = 1;
     }
 
