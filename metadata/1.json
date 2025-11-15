@@ -1,7 +1,7 @@
 {
-    "name": "My Cool NFT #1",
-    "description": "This is my first ERC-721 NFT from the Hardhat project.",
-    "image": "http://127.0.0.1:8080/assets/image.png",
+    "name": "My First NFT #1",
+    "description": "This is my first ERC-721 NFT using real metadata + image",
+    "image": "http://localhost:3000/images/image.png",
     "attributes": [
         {
             "trait_type": "Level",
